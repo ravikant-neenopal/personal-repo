@@ -1,0 +1,28 @@
+.main-div{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(
+    transparent 0deg,
+    #a2cce9 90deg,
+    #6ab0e4 180deg,
+    #3498db 270deg
+  );
+  mask: radial-gradient(farthest-side, transparent 60%, black 60%);
+  -webkit-mask: radial-gradient(farthest-side, transparent 60%, black 60%);
+  animation: spin 1s linear infinite;
+}
+
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Counter from './Counter';
+import UserInfo from './UserInfo';
+import Intro from './Intro';
+import Para from './Para';
+import Api from './Api';
+import Form from './Form';
+import ButtonParam from './ButtonParam';
 
 function App() {
+  const stData = [
+    {name: "Ravi",course:"CE",roll:1},
+    {name: "Ravina",course:"ECE",roll:2},
+    {name: "Ram",course:"EE",roll:3},
+  ]
+
+  const [show, setShow] = useState(false);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Counter /> */}
+      {/* <UserInfo /> */}
+      {/* {
+        stData.map((item) => (
+        <Intro name={item.name} course={item.course} roll={item.roll} />
+        ))
+      }  */}
+      {/* <Para />  */}
+
+      
+      {/* <Api /> */}
+      {/* <Form /> */}
+      {/* <h1>Welcome to React</h1>
+      <button onClick={() => setShow(!show)}>
+        {show ? "Hide" : "Show"} User Info
+      </button>
+      {show && <Form />} */}
+      <ButtonParam />
     </div>
   );
 }
